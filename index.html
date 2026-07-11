@@ -12,52 +12,70 @@
       background: #fafafa;
       color: #1a1a1a;
       min-height: 100vh;
-      padding: 20px;
+      padding: 0;
     }
     .container {
-      max-width: 480px;
+      max-width: 520px;
       margin: 0 auto;
+    }
+    /* Banner */
+    .banner {
+      width: 100%;
+      border-radius: 0 0 16px 16px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .banner img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
     }
     /* Header */
     .header {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
+      padding: 0 16px;
     }
     .logo {
-      width: 72px; height: 72px;
-      margin: 0 auto 12px;
-      background: #1a1a1a;
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 10px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
+      border: 3px solid #7B1FA2;
+      box-shadow: 0 4px 12px rgba(123,31,162,0.25);
     }
-    .logo svg { stroke: #fff; }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .header h1 {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 500;
+      color: #4A148C;
       letter-spacing: 0.5px;
     }
     .header p {
       font-size: 13px;
-      color: #888;
+      color: #9C27B0;
       margin-top: 4px;
     }
     /* Price Banner */
     .price-banner {
-      background: #1a1a1a;
+      background: #4A148C;
       color: #fff;
       border-radius: 12px;
       padding: 18px;
       text-align: center;
-      margin-bottom: 24px;
+      margin: 0 16px 20px;
     }
     .price-banner span {
       font-size: 13px;
-      opacity: 0.8;
+      opacity: 0.85;
     }
     .price-banner .price {
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 500;
       margin-top: 4px;
       font-variant-numeric: tabular-nums;
@@ -65,6 +83,7 @@
     /* Steps */
     .step {
       margin-bottom: 20px;
+      padding: 0 16px;
       transition: opacity 0.3s ease;
     }
     .step-header {
@@ -74,8 +93,9 @@
       margin-bottom: 12px;
     }
     .step-number {
-      width: 28px; height: 28px;
-      background: #1a1a1a;
+      width: 28px;
+      height: 28px;
+      background: #7B1FA2;
       color: #fff;
       border-radius: 50%;
       display: flex;
@@ -88,16 +108,17 @@
     .step-title {
       font-size: 17px;
       font-weight: 500;
+      color: #4A148C;
     }
     .step-subtitle {
       font-size: 12px;
-      color: #888;
-      margin: -6px 0 10px 28px;
+      color: #9C27B0;
+      margin: -6px 0 10px 36px;
     }
     .step-count {
       font-size: 12px;
-      color: #888;
-      background: #f0f0f0;
+      color: #9C27B0;
+      background: #F3E5F5;
       padding: 3px 10px;
       border-radius: 20px;
       margin-left: auto;
@@ -115,21 +136,23 @@
     }
     .btn {
       padding: 12px 14px;
-      border: 1.5px solid #e0e0e0;
+      border: 2px solid #E1BEE7;
       border-radius: 10px;
       background: transparent;
       cursor: pointer;
       font-size: 14px;
       font-weight: 500;
-      color: #1a1a1a;
+      color: #4A148C;
       text-align: left;
       transition: all 0.2s ease;
       font-family: inherit;
     }
-    .btn:hover { border-color: #1a1a1a; }
+    .btn:hover {
+      border-color: #7B1FA2;
+    }
     .btn.active {
-      background: #1a1a1a;
-      border-color: #1a1a1a;
+      background: #7B1FA2;
+      border-color: #7B1FA2;
       color: #fff;
     }
     .btn-delivery {
@@ -143,48 +166,57 @@
     }
     .btn-delivery .sublabel {
       font-size: 12px;
-      color: #888;
+      color: #9C27B0;
       font-weight: 400;
       margin-top: 2px;
     }
     /* Summary */
     .summary {
-      background: #f5f5f5;
+      background: #F3E5F5;
       border-radius: 12px;
       padding: 16px;
-      margin-bottom: 16px;
+      margin: 0 16px 16px;
       display: none;
     }
     .summary h3 {
       font-size: 15px;
       font-weight: 500;
       margin-bottom: 12px;
+      color: #4A148C;
     }
     .summary-content {
       font-size: 13px;
-      color: #555;
+      color: #7B1FA2;
       line-height: 1.8;
     }
-    .summary-content strong { color: #1a1a1a; }
+    .summary-content strong {
+      color: #4A148C;
+    }
     .summary-total {
-      border-top: 1px solid #e0e0e0;
+      border-top: 1px solid #E1BEE7;
       margin-top: 12px;
       padding-top: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .summary-total .label { font-size: 14px; font-weight: 500; }
+    .summary-total .label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #4A148C;
+    }
     .summary-total .price {
       font-size: 22px;
       font-weight: 500;
+      color: #4A148C;
       font-variant-numeric: tabular-nums;
     }
     /* WhatsApp Button */
     .btn-whatsapp {
-      width: 100%;
+      width: calc(100% - 32px);
+      margin: 0 16px 24px;
       padding: 16px;
-      background: #1a1a1a;
+      background: #4A148C;
       color: #fff;
       border: none;
       border-radius: 12px;
@@ -203,7 +235,7 @@
       cursor: not-allowed;
     }
     .btn-whatsapp:not(:disabled):hover {
-      background: #333;
+      background: #6A1B9A;
     }
     /* Disabled steps */
     .step.disabled {
@@ -217,24 +249,26 @@
     }
     /* Responsive */
     @media (max-width: 400px) {
-      .btn-grid { grid-template-columns: 1fr; }
+      .btn-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Banner -->
+    <div class="banner">
+      <img src="https://raw.githubusercontent.com/UiltonFelipe/acai-da-maju/main/banner.png" alt="Açaí da Maju Banner">
+    </div>
+
     <!-- Header -->
     <div class="header">
       <div class="logo">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
-          <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-          <line x1="9" y1="9" x2="9.01" y2="9"/>
-          <line x1="15" y1="9" x2="15.01" y2="9"/>
-        </svg>
+        <img src="https://raw.githubusercontent.com/UiltonFelipe/acai-da-maju/main/logo.png" alt="Logo Açaí da Maju">
       </div>
       <h1>Açaí da Maju</h1>
-      <p>O melhor açaí da cidade</p>
+      <p>Naturalmente irresistível sempre!</p>
     </div>
 
     <!-- Price -->
